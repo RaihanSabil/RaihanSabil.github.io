@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: var(--light-color);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--dark-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('asset/porto.jpg') center/cover;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 5rem 2rem;
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        /*Profile section*/
+        .profile {
+        padding: 8rem 2rem 4rem;
+        background: white;
+    }
+
+    .profile-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--primary-color);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .profile-content {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .profile-name {
+        font-size: 2.5rem;
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+    }
+
+    .profile-title {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-description {
+        color: #666;
+        line-height: 1.8;
+        max-width: 600px;
+    }
+
+    @media (max-width: 768px) {
+        .profile-container {
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .profile-content {
+            text-align: center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Data Analyst Portfolio</h1>
+            <p>Transforming raw data into meaningful insights</p>
+        </div>
+    </section>
+
+    <section class="profile">
+        <div class="profile-container">
+            <img src="asset/foto porto.jpg" alt="Your Name" class="profile-photo">
+            <div class="profile-content">
+                <h1 class="profile-name">RAIHAN TSABITA SABIL</h1>
+                <h2 class="profile-title">Data Analyst</h2>
+                <p class="profile-description">
+                    Saya adalah mahasiswa teknik informatika lulusan Universitas Nasional 
+                    yang tertarik dalam dunia Data Analyst. Saya suka mempelajari hal-hal baru dengan cepat 
+                    dan bekerja sama dengan baik dengan orang lain dan menerima masukan sebagai insight yang berharga. 
+                    Memiliki keahlian dalam Python, SQL, dan visualisasi data. Saya telah mencoba beberapa
+                    proyek kecil yang saya kerjakan selama kuliah.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 style="text-align: center; margin-bottom: 3rem;">My Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="asset/project 1.png" alt="Project 1" class="project-image">
+                <div class="project-content">
+                    <h3>Classification Loan With Home Credit Default Risk</h3>
+                    <p>Memprediksi risiko kredit sehingga bank/perusahaan/institusi keuangan dapat 
+                        memberikan pinjaman kepada pelanggan dengan tepat sasaran sehingga dapat 
+                        mengantisipasi adanya gagal bayar.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/RaihanSabil/Project-Team-12-ZENIUS" class="btn">View Project</a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more project cards here -->
+             <!-- Project 2 -->
+            <div class="project-card">
+                <img src="asset/project 2.png" alt="Project 1" class="project-image">
+                <div class="project-content">
+                    <h3>CeriaKids</h3>
+                    <p>Projek capstone Bangkit Academy, membuat aplikasi pemantau kesehatan anak yang terintegrasi dengan machine learning</p>
+                    <div class="project-links">
+                        <a href="https://github.com/RaihanSabil/Bangkit-Capstone" class="btn">View Project</a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fas fa-database fa-3x"></i>
+                <h3>SQL</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-python fa-3x"></i>
+                <h3>Python</h3>
+            </div>
+            <!-- Add more skills here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Data Analyst Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Reveal animation on scroll
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            const reveals = document.querySelectorAll('.project-card, .skill-item');
+            
+            for(let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
+                
+                if(revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
