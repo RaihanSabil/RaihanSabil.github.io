@@ -1,0 +1,193 @@
+:root {
+    --bg-color: #121212;
+    --primary-color: #1f1f1f;
+    --secondary-color: #2a2a2a;
+    --font-color: #e0e0e0;
+    --accent-color: #ffffff;
+    --gradient: linear-gradient(90deg, #4a90e2, #9013fe);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    padding-top: 80px;
+}
+
+section {
+    padding: 6rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    background: var(--gradient);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline-item {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--primary-color);
+    border-left: 4px solid;
+    border-image: var(--gradient) 1;
+    border-radius: 8px;
+}
+.timeline-item h3 { color: var(--accent-color); }
+.timeline-item p { font-size: 0.9rem; color: #a0a0a0; }
+.timeline-item ul { list-style-position: inside; margin-top: 1rem; }
+
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 { margin-bottom: 1rem; color: var(--accent-color); }
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.project-tags span { background-color: var(--secondary-color); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; }
+.btn-secondary { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--font-color); color: var(--font-color); border-radius: 20px; text-decoration: none; transition: background 0.3s, color 0.3s; }
+.btn-secondary:hover { background: var(--accent-color); color: var(--bg-color); }
+
+#contact { text-align: center; }
+#contact p { max-width: 600px; margin: 0 auto 2rem auto; }
+.social-links { margin-top: 2rem; }
+.social-links a { color: var(--font-color); text-decoration: none; margin: 0 1rem; font-weight: 600; }
+.social-links a:hover { color: var(--accent-color); }
+
+footer { text-align: center; padding: 2rem 5%; background-color: var(--primary-color); }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul { display: none; } /* Simple hide for mobile, can be replaced with hamburger menu */
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1.2rem; }
+    .about-container { flex-direction: column; text-align: center; }
+    section { padding: 4rem 5%; }
+}
