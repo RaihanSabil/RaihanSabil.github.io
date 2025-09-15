@@ -3,344 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Data Analyst</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --dark-color: #2c3e50;
-            --light-color: #ecf0f1;
-        }
-
-        body {
-            line-height: 1.6;
-            background-color: var(--light-color);
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: var(--dark-color);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin: 0 1.5rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('asset/porto.jpg') center/cover;
-            color: white;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 5rem 2rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-links {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-        }
-
-        /* Skills Section */
-        .skills {
-            padding: 5rem 2rem;
-            background-color: var(--dark-color);
-            color: white;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .skill-item {
-            text-align: center;
-            padding: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-links li {
-                margin: 0.5rem 0;
-            }
-        }
-
-        /*Profile section*/
-        .profile {
-        padding: 8rem 2rem 4rem;
-        background: white;
-    }
-
-    .profile-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-        flex-wrap: wrap;
-    }
-
-    .profile-photo {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 5px solid var(--primary-color);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .profile-content {
-        flex: 1;
-        min-width: 300px;
-    }
-
-    .profile-name {
-        font-size: 2.5rem;
-        color: var(--dark-color);
-        margin-bottom: 1rem;
-    }
-
-    .profile-title {
-        color: var(--secondary-color);
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .profile-description {
-        color: #666;
-        line-height: 1.8;
-        max-width: 600px;
-    }
-
-    @media (max-width: 768px) {
-        .profile-container {
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .profile-content {
-            text-align: center;
-        }
-    }
-    </style>
+    <title>Raihan Tsabita Sabil - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
-    </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Data Analyst Portfolio</h1>
-            <p>Transforming raw data into meaningful insights</p>
-        </div>
-    </section>
+    <header>
+        <nav>
+            <div class="logo">Raihan Sabil</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="profile">
-        <div class="profile-container">
-            <img src="asset/foto porto.jpg" alt="Your Name" class="profile-photo">
-            <div class="profile-content">
-                <h1 class="profile-name">RAIHAN TSABITA SABIL</h1>
-                <h2 class="profile-title">Data Analyst</h2>
-                <p class="profile-description">
-                    Saya adalah mahasiswa teknik informatika lulusan Universitas Nasional 
-                    yang tertarik dalam dunia Data Analyst. Saya suka mempelajari hal-hal baru dengan cepat 
-                    dan bekerja sama dengan baik dengan orang lain dan menerima masukan sebagai insight yang berharga. 
-                    Memiliki keahlian dalam Python, SQL, dan visualisasi data. Saya telah mencoba beberapa
-                    proyek kecil yang saya kerjakan selama kuliah.
-                </p>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Raihan Tsabita Sabil</h1>
+                <p>Informatics Graduate | Data Enthusiast | Software Tester</p>
+                <a href="#projects" class="btn">View My Work</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects">
-        <h2 style="text-align: center; margin-bottom: 3rem;">My Projects</h2>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="asset/project 1.png" alt="Project 1" class="project-image">
-                <div class="project-content">
-                    <h3>Classification Loan With Home Credit Default Risk</h3>
-                    <p>Memprediksi risiko kredit sehingga bank/perusahaan/institusi keuangan dapat 
-                        memberikan pinjaman kepada pelanggan dengan tepat sasaran sehingga dapat 
-                        mengantisipasi adanya gagal bayar.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/RaihanSabil/Project-Team-12-ZENIUS" class="btn">View Project</a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="asset/foto porto.jpg" alt="Raihan Tsabita Sabil" class="profile-pic">
+                <div class="about-text">
+                    <p>
+                        An Informatics graduate from Universitas Nasional with a strong academic record and a diverse background in data analysis, software testing, and digital education.
+                    </p>
+                    <p>
+                        Throughout my academic and professional journey, I have engaged in various roles—from data analytics at Zenius and machine learning at Bangkit Academy, to hands-on system testing (UAT) at Allo Bank and teaching foundational computing to young learners. This multidisciplinary experience has shaped my analytical mindset and attention to detail.
+                    </p>
+                    <p>
+                        I am driven by a deep interest in technology's role in solving real-world problems and strive to contribute meaningful insights that align with organizational goals.
+                    </p>
                 </div>
             </div>
-            <!-- Add more project cards here -->
-             <!-- Project 3 -->
-            <div class="project-card">
-                <img src="asset/project 2.png" alt="Project 1" class="project-image">
-                <div class="project-content">
-                    <h3>CWeb Scraping My</h3>
-                    <p>Projek capstone Bangkit Academy, membuat aplikasi pemantau kesehatan anak yang terintegrasi dengan machine learning</p>
-                    <div class="project-links">
-                        <a href="https://github.com/RaihanSabil/Bangkit-Capstone" class="btn">View Project</a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>User Acceptance Tester</h3>
+                    <p><strong>Allo Bank</strong> | 06/2025 - Present</p>
+                    <ul>
+                        <li>Conduct end-to-end system and regression testing.</li>
+                        <li>Design, execute, and document test cases based on BRD/FSD.</li>
+                        <li>Collaborate with cross-functional teams to resolve issues.</li>
+                    </ul>
+                </div>
+                 <div class="timeline-item">
+                    <h3>IT Specialist Support</h3>
+                    <p><strong>Hyperspace</strong> | 11/2024 - 01/2025</p>
+                    <ul>
+                        <li>Configured and maintained server infrastructure.</li>
+                        <li>Developed and deployed object detection solutions using YOLO.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Coding Teacher (Part Time)</h3>
+                    <p><strong>Golden Age Islamic School</strong> | 09/2023 - 06/2025</p>
+                    <ul>
+                        <li>Teaching computer basics and digital literacy to elementary school students in grades 1–6</li>
+                        <li>Introducing programming logic and computational thinking through interactive projects</li>
+                        <li>Developing engaging and age-appropriate learning materials to support practical activities</li>
+                        <li>Encouraging creativity and early interest in technology through a fun approach</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Machine Learning Cohort</h3>
+                    <p><strong>Bangkit Academy (Independent Study)</strong> | 08/2023 - 12/2023</p>
+                     <ul>
+                        <li>Gained hands-on skills in data analysis and predictive modeling.</li>
+                        <li>Led the development of the "CeriaKids" application for child growth monitoring.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Data Analytics (Studi Independen Kampus Merdeka)</h3>
+                    <p><strong>Zenius</strong> | 2/2023 - 06/2023</p>
+                     <ul>
+                        <li>Specializing in data analysis with emphasis on practical skills and real-world applications</li>
+                        <li>Conducting data understanding and preprocessing on the Home Credit Default Risk project to ensure data quality</li>
+                        <li>pplying statistical techniques to prepare data for predictive modeling and extract actionable insights</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>CeriaKids Application</h3>
+                        <p>A digital solution for child growth monitoring, developed as a capstone project at Bangkit Academy. This project combines technical expertise with social impact.</p>
+                        <div class="project-tags">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                            <span>App Development</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RaihanSabil/Bangkit-Capstone" class="btn-secondary">View Code</a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                <img src="asset/project 3.png" alt="Project 1" class="project-image">
-                <div class="project-content">
-                    <h3>CWeb Scraping MyAnimeList - Seiyuu & Anime Popularity Analysis</h3>
-                    <p>Proyek ini dibuat untuk melakukan web scraping data dari MyAnimeList dengan tujuan menganalisis hubungan popularitas Seiyuu (pengisi suara) dengan popularitas anime.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/RaihanSabil/Web-Scraping-MyAnimelist" class="btn">View Project</a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                    <div class="project-info">
+                        <h3>Classification Loan With Home Credit Default Risk</h3>
+                        <p>Predicting credit risk so that banks/companies/financial institutions can provide loans to customers in a targeted manner, thereby anticipating defaults.</p>
+                         <div class="project-tags">
+                            <span>Data Analyst</span>
+                            <span>Python</span>
+                            <span>SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RaihanSabil/Project-Team-12-ZENIUS" class="btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="project-card">
+                    <div class="project-info">
+                        <h3>Web Scraping MyAnimeList - Seiyuu & Anime Popularity Analysis</h3>
+                        <p>This project was created to perform web scraping of data from MyAnimeList with the aim of analyzing the relationship between the popularity of Seiyuu (voice actors) and the popularity of anime.</p>
+                         <div class="project-tags">
+                            <span>Web Scraping</span>
+                            <span>Data Analysis</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-links">
+                             <a href="https://github.com/RaihanSabil/MyAnimeList-Web-Scraping" class="btn-secondary">View Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="skills">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <i class="fas fa-database fa-3x"></i>
-                <h3>SQL</h3>
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!</p>
+            <a href="mailto:raihan.sabili@gmail.com" class="btn">Say Hello</a>
+            <div class="social-links">
+                <a href="https://github.com/RaihanSabil" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/raihantsabitasabil/" target="_blank">LinkedIn</a>
             </div>
-            <div class="skill-item">
-                <i class="fab fa-python fa-3x"></i>
-                <h3>Python</h3>
-            </div>
-            <!-- Add more skills here -->
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2023 Data Analyst Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 | Designed & Built by Raihan Tsabita Sabil</p>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Reveal animation on scroll
-        window.addEventListener('scroll', reveal);
-
-        function reveal() {
-            const reveals = document.querySelectorAll('.project-card, .skill-item');
-            
-            for(let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const revealTop = reveals[i].getBoundingClientRect().top;
-                const revealPoint = 150;
-                
-                if(revealTop < windowHeight - revealPoint) {
-                    reveals[i].classList.add('active');
-                } else {
-                    reveals[i].classList.remove('active');
-                }
-            }
-        }
-    </script>
 </body>
 </html>
